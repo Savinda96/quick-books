@@ -15,6 +15,7 @@
   "author": "noobAlliance",
   "license": "ISC",
   "dependencies": {
+    "client-oauth2": "^4.3.3",
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "mongodb": "^4.13.0"

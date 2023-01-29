@@ -1,9 +1,10 @@
 import { Router } from 'express';
 import bodyParser from 'body-parser';
-import setQuickBookConnection from './services/auth-quick-books';
+import services from './services'
+const {setQuickBookAuthCode, getAuthTokens} =services;
 const router = Router();
 
-router.post(
+router.get(
   '/connect',
   [
     bodyParser.urlencoded({
@@ -11,7 +12,18 @@ router.post(
     }),
     bodyParser.json(),
   ],
-  setQuickBookConnection,
+  setQuickBookAuthCode,
+);
+
+router.get(
+  '/get-token',
+  [
+    bodyParser.urlencoded({
+      extended: false,
+    }),
+    bodyParser.json(),
+  ],
+  getAuthTokens,
 );
 
 export default router;
