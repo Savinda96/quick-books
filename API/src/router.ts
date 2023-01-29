@@ -1,29 +1,39 @@
-import { Router } from 'express';
-import bodyParser from 'body-parser';
-import services from './services'
-const {setQuickBookAuthCode, getAuthTokens} =services;
+import { Router } from "express";
+import bodyParser from "body-parser";
+import services from "./services";
+const { setQuickBookAuthCode, getAuthTokens, getRevenue } = services;
 const router = Router();
 
 router.get(
-  '/connect',
+  "/connect",
   [
     bodyParser.urlencoded({
       extended: false,
     }),
     bodyParser.json(),
   ],
-  setQuickBookAuthCode,
+  setQuickBookAuthCode
 );
 
 router.get(
-  '/get-token',
+  "/get-token",
   [
     bodyParser.urlencoded({
       extended: false,
     }),
     bodyParser.json(),
   ],
-  getAuthTokens,
+  getAuthTokens
+);
+router.get(
+  "/get-revenue",
+  [
+    bodyParser.urlencoded({
+      extended: false,
+    }),
+    bodyParser.json(),
+  ],
+  getRevenue
 );
 
 export default router;

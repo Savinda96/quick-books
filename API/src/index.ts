@@ -1,13 +1,13 @@
-import express, { Express, Request, Response } from 'express';
-import router from './router';
+import express, { Express, Request, Response } from "express";
+import router from "./router";
 
 const app: Express = express();
 const port = 3000;
 
 app.use(router);
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Welcome to revenue checker app');
+app.get("/", (req: Request, res: Response) => {
+  res.send("Welcome to revenue checker app");
 });
 
 app.listen(port, () => {
