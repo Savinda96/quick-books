@@ -18,6 +18,10 @@ CLIENT_SECRET=<client secret>
 10. You might have to login into your quick book accounts to provide authorization to your app
 11. Once it is completed you will be navigate into revenue calculator
 
+## Demo
+
+https://user-images.githubusercontent.com/54589431/215542014-43ae8200-66a8-40b2-9ca0-7c93800abe94.mov
+
 ## Folder structure
 ```bash
 .
