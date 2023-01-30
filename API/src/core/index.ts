@@ -5,7 +5,7 @@ import config from "../config/config";
 // TODO : Set CSRF set up for state value
 const authHandler = new AuthenticationHandler({
   clientId: config.clientId,
-  clientSecret: config.clientSecrete,
+  clientSecret: config.clientSecret,
   redirectUri: config.redirectUri,
   authorizationUri: config.authorizationUri,
   accessTokenUri: config.accessTokenUri,

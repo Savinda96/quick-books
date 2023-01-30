@@ -9,7 +9,7 @@ const config = {
   scopes: ["com.intuit.quickbooks.accounting"],
   state: "CSRF",
   clientId: process.env.CLIENT_ID || "",
-  clientSecrete: process.env.CLIENT_SECRET || "",
+  clientSecret: process.env.CLIENT_SECRET || "",
 };
 
 export default config;

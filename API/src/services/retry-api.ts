@@ -2,6 +2,7 @@ import core from "../core";
 import btoa from "btoa";
 import axios from "axios";
 import url from "url";
+import config from "../config/config";
 const { cache } = core;
 
 const retryApi = async (
@@ -30,9 +31,9 @@ const refreshTokens = async () => {
     grant_type: "refresh_token",
   });
   const authString = btoa(
-    "AB7mhTlDTPjvioBxDYAs5kRwnbcQQfsXDg4O1DVUvxhvhpbOdJ" +
+    `${config.clientId}` +
       ":" +
-      "Ct6zlr2LHLQ1l9kTyQFFMnR0B9sIFOosHJAU6KoG"
+      `${config.clientSecret}`
   );
   const authRefreshResponse = await axios({
     method: "POST",
