@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+ head
+   title Pug Button
+   style.
+    .form-container {
+        width: 500px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    label {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    input[type="date"] {
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid gray;
+    }
+
+    button[type="submit"] {
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+ body
+    form(class="form-container" method="get" action="/get-revenue")
+        div
+            label Start Date:
+            input(type="date" name="startDate" required)
+        div
+            label End Date:
+            input(type="date" name="endDate" required)
+
+        button(type="submit") Submit
