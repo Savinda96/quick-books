@@ -3,7 +3,7 @@ import axios from "axios";
 import retryApi from "./retry-api";
 
 const { cache } = core;
-
+// Used to fetch the revenue between the days
 const getRevenue = async (req: any, res: any, next: any): Promise<void> => {
   const realmId = cache.getCurrentCache().get("realmId");
   const url = `https://sandbox-quickbooks.api.intuit.com/v3/company/${realmId}/reports/ProfitAndLoss?start_date=${req.query.startDate}&end_date=${req.query.endDate}`;
