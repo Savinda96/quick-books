@@ -16,7 +16,7 @@ CLIENT_SECRET=<client secret>
 8. Navigate to  `http://localhost:3000/` in your browser
 9. Press on connect to connect to quick books
 10. You might have to login into your quick book accounts to provide authorization to your app
-11. Once it is completed you will be navigate into revenue calculator
+11. Once it is completed you will be navigated into the revenue calculator
 
 ## Demo
 
@@ -49,7 +49,6 @@ https://user-images.githubusercontent.com/54589431/215542014-43ae8200-66a8-40b2-
     ├── index.pug
     ├── information.pug
     ├── revenue.pug
-    └── styles.css
 ```
 ### To Do
 * Refresh token will be outdated after 100 hundred days, server restart would resolve this issue until implemented

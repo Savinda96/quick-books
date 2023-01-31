@@ -36,7 +36,7 @@ const getRevenue = async (req: any, res: any, next: any): Promise<void> => {
       },
     } = response;
     const row = Row.find(({ group }: { group: string }) => group === "Income");
-    if (row && row.Summary && row.Summary.ColData.length === 2) {
+    if (row?.Summary?.ColData.length === 2) {
       res.render("information.pug", { revenue: row.Summary.ColData[1].value || " No revenue"});
     }
   } else {
